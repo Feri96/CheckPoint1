@@ -73,6 +73,9 @@
     margin-left: 20%;
 }
 
+.main_body .card {
+    margin-top: 5%;
+}
 .main_body .form-check-label{
     color: white;
 }
