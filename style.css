@@ -1,0 +1,43 @@
+.header {
+    background-color: midnightblue !important;
+}
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: midnightblue !important;
+}
+
+.main_body {
+    position: center;
+    background-color: darkgray;
+    object-position: center;
+    height: 1000px;
+}
+
+.main_body .carousel .carousel-indicators {
+    bottom: auto;
+    position: fixed;
+}
+.main_body .carousel .carousel-indicators .button{
+    bottom: auto;
+    position: fixed;
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 3px;
+    background-color: midnightblue;
+    color: white;
+    position: absolute;
+    bottom: 0 !important;
+}
+
+.footer h4 {
+    margin-top: 10%;
+}
+
+.footer a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
