@@ -48,8 +48,28 @@
     z-index: 1 !important;
     height: auto;
     position: center;
-    background-color: darkgray;
+    background-color: #361e62;
     object-position: center;
+}
+.main_body .welcome {
+    text-align: center;
+}
+.main_body h2 {
+    font-size: 30px;
+    color: red !important;
+}
+
+.main_body .welcome a {
+    font-size: 25px;
+    color: #fafafa;
+}
+
+.main_body .form-label {
+    color: white;
+}
+
+.main_body .form-check-label{
+    color: white;
 }
 
 .main_body .carousel-indicators {
@@ -63,7 +83,6 @@
 .main_body .carousel-item {
     margin-left: 15%;
     width: 70%;
-    height: fit-content;
     position: center;
     z-index: 1 !important;
 }
@@ -77,7 +96,7 @@
     border-top-color: red;
     background-color: midnightblue;
     background-image: url("/img/2.jpg");
-    position: fixed;
+    position: relative;
     bottom: 0 !important;
 }
 
