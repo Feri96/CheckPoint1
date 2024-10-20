@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dd10d4f-3497-4862-a743-0a238b878235" name="Changes" comment="se">
+      <change afterPath="$PROJECT_DIR$/img/games/h4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zoznam_hier.html" beforeDir="false" afterPath="$PROJECT_DIR$/zoznam_hier.html" afterDir="false" />
     </list>
@@ -49,8 +51,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Frant\Checkpoint1\img" />
       <recent name="C:\Users\Frant\Checkpoint1\img\games" />
+      <recent name="C:\Users\Frant\Checkpoint1\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729446331524</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="se">
+      <created>1729446440386</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1729446440386</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
