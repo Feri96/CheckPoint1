@@ -68,6 +68,11 @@
     color: white;
 }
 
+.main_body .row {
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
 .main_body .form-check-label{
     color: white;
 }
