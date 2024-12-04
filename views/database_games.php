@@ -13,7 +13,7 @@
     require_once $_SERVER["DOCUMENT_ROOT"]."/controllers/GameController.php";
     ?>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
 </head>
 
@@ -105,7 +105,7 @@ try{
                 ?>
             </table>
         </div>
-        <a class="btn btn-primary" href="add_game.php">Pridaj</a>
+        <a class="btn btn-primary" href="/views/add_game.php">Pridaj</a>
     </div>
 </section>
 
