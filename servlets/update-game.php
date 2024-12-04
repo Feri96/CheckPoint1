@@ -11,6 +11,7 @@ if(isset($_REQUEST["game_name"]) && isset($_REQUEST["genre"]) && isset($_REQUEST
     try {
         $gameController->editGame($game);
         header("Location: /views/database_games.php");
+        exit;
     } catch (Exception $e) {
         echo $e->getMessage();
     }

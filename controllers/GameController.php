@@ -87,10 +87,10 @@ class GameController
         }
     }
 
-    public function editClient(Game $game):bool {
+    public function editGame(Game $game):bool {
         try{
             $pdo = Settings::getConnection();
-            $sql = "UPDATE clients SET client_id = :client_id, first_name = :first_name, last_name = :last_name, email = :email, birth_date = :birth_date, city = :city WHERE client_id = :client_id";
+            $sql = "UPDATE game SET id_game = :id_game, game_name = :game_name, genre = :genre, minimal_age = :minimal_age, text = :text, release_date = :release_date WHERE id_game = :id_game";
 
             $stmt = $pdo->prepare($sql);
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Domov</title>
 
@@ -59,7 +60,7 @@
         <div class="center">
 
             <form action="/servlets/insert-game.php" method="post" id="insert_form">
-                <h2>Pridaj klienta</h2>
+                <h2>Pridaj hru</h2>
                 <div class="mb-3">
                     <label for="text" class="form-label">Názov hry</label>
                     <input type="text" class="form-control" name="game_name" id="game_name">

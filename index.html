@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Domov</title>
 
@@ -8,7 +9,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -53,34 +53,49 @@
   </nav>
 </section>
 <section class="main_body">
-  <div id="carouselExampleDark" class="carousel carousel-dark slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000">
-        <img src="/img/games/h1.jpg" class="d-block w-100" alt="...">
 
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="/img/games/h2.jpg" class="d-block w-100" alt="...">
-
-      </div>
-      <div class="carousel-item">
-        <img src="/img/games/h3.jpg" class="d-block w-100" alt="...">
-      </div>
+  <div class="carousel-container">
+    <div class="carousel-slide active">
+      <img src="img/games/h1.jpg" alt="Slide 1">
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="carousel-slide">
+      <img src="img/games/h2.jpg" alt="Slide 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="img/games/h3.jpg" alt="Slide 3">
+    </div>
+
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
   </div>
+
+  <script>
+    let currentSlideIndex = 0;
+
+    function showSlide(index) {
+      const slides = document.getElementsByClassName('carousel-slide');
+      if (index >= slides.length) {
+        currentSlideIndex = 0;
+      }
+      if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slides[currentSlideIndex].classList.add('active');
+    }
+
+    function changeSlide(n) {
+      currentSlideIndex += n;
+      showSlide(currentSlideIndex);
+    }
+
+    // Zobraz prvý slide na začiatku
+    showSlide(currentSlideIndex);
+  </script>
+
 
   <div class="welcome">
     <h2>Nová platforma na pravidelné hranie hier!</h2>
