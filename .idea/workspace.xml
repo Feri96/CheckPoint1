@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dd10d4f-3497-4862-a743-0a238b878235" name="Changes" comment="se">
-      <change afterPath="$PROJECT_DIR$/img/games/h4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/GameController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helpers/Settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlets/delete-game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlets/insert-game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlets/update-game.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zoznam_hier.html" beforeDir="false" afterPath="$PROJECT_DIR$/zoznam_hier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/not_found.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/not_found.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registracia.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/registracia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zoznam_hier.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/zoznam_hier.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Frant/OneDrive/Počítač/Checkpoint2-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,6 +60,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frant\Checkpoint1\views" />
       <recent name="C:\Users\Frant\Checkpoint1\img\games" />
       <recent name="C:\Users\Frant\Checkpoint1\img" />
     </key>
@@ -68,12 +78,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="03f3957d-54df-444a-bc9d-ce626b5922ed" name="Changes" comment="" />
+      <changelist id="5dd10d4f-3497-4862-a743-0a238b878235" name="Changes" comment="se" />
       <created>1728917751668</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728917751668</updated>
       <workItem from="1728917753139" duration="420000" />
+      <workItem from="1729681797595" duration="1572000" />
+      <workItem from="1733304948946" duration="3570000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1728917888221</created>
@@ -124,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1729446440386</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="se">
+      <created>1729447346270</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1729447346270</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
