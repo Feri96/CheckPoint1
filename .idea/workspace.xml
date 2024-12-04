@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5dd10d4f-3497-4862-a743-0a238b878235" name="Changes" comment="se">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/add_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add_game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/database_games.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/database_games.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/edit_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit_game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlets/delete-game.php" beforeDir="false" afterPath="$PROJECT_DIR$/servlets/delete-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlets/insert-game.php" beforeDir="false" afterPath="$PROJECT_DIR$/servlets/insert-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlets/update-game.php" beforeDir="false" afterPath="$PROJECT_DIR$/servlets/update-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/add_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/add-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/database_games.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/database-games.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/edit_game.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/edit-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/not_found.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/not_found.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registracia.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/registracia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/zoznam_hier.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/zoznam_hier.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +60,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frant\Checkpoint1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Frant\Checkpoint1" />
       <recent name="C:\Users\Frant\Checkpoint1\views" />
       <recent name="C:\Users\Frant\Checkpoint1\img\games" />
       <recent name="C:\Users\Frant\Checkpoint1\img" />
@@ -79,7 +91,7 @@
       <workItem from="1728917753139" duration="420000" />
       <workItem from="1729681797595" duration="1572000" />
       <workItem from="1733304948946" duration="16368000" />
-      <workItem from="1733340794032" duration="2571000" />
+      <workItem from="1733340794032" duration="5683000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1728917888221</created>
@@ -165,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733342903198</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="se">
+      <created>1733343635154</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733343635154</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -7,12 +7,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../style.css">
 
     <?php
-    require_once "..\header.php"
+    require_once "..\header.php";
+    require_once $_SERVER["DOCUMENT_ROOT"]."/controllers/GameController.php";
     ?>
-    <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
@@ -101,7 +102,7 @@
                 <li><a href="registracia.html"><p>Registrácia</p></a></li>
                 <li><a href="not_found.html"><p>Prihlasenie</p></a></li>
                 <li><a href="not_found.html"><p>Obchodné podmienky</p></a></li>
-                <li><a href="database_games.php"><p>Databaza</p></a></li>
+                <li><a href="database-games.php"><p>Databaza</p></a></li>
             </ul>
         </div>
         <div class="col-sm-4">
@@ -115,13 +116,13 @@
         rules: {
             game_name: {
                 required: true,
-
             },
             genre: {
                 required: true,
             },
             minimal_age: {
                 required: true,
+                number: true,
             },
             text: {
                 required: true,

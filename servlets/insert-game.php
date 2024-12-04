@@ -19,7 +19,7 @@ try {
     $gameController->addGame($game);
 
     // Presmerovanie na tabuľku
-    header("Location: /views/database_games.php");
+    header("Location: /views/database-games.php");
     exit;
 } catch (PDOException $exception) {
     error_log("Database error: " . $exception->getMessage());

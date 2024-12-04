@@ -3,34 +3,34 @@
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Uprava hry</title>
+    <title>Databaza</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
+    <link rel="stylesheet" href="../style.css">
     <?php
     require_once "..\header.php";
     require_once $_SERVER["DOCUMENT_ROOT"]."/controllers/GameController.php";
     ?>
-    <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
+
 <?php
 $games = [];
-$id_game = $_REQUEST["id_game"];
 $gameController = new GameController();
 try{
-    $games = $gameController->selectGameById($id_game);
+    $games = $gameController->selectAllGames(50);
 }catch(Exception $e) {
     echo $e->getMessage();
 }
 ?>
+
 <section class="header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Game Oasis
+            <a class="navbar-brand" href="index.html">Game Oasis
                 <img src="/img/1.png" alt="Logo" width="60" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,37 +68,42 @@ try{
     </nav>
 </section>
 <section class="main_body">
-    <div class="col-sm-10">
-        <div class="center">
-
-            <form action="/servlets/update-game.php" method="post" id="update_form">
-                <div class="form-group">
-                    <input value = "<?= $id_game ?>" type="hidden" name="id_game" id="id_game" class="form-control">
-                </div>
-                <h2>Uprav hru</h2>
-                <div class="mb-3">
-                    <label for="text" class="form-label">Názov hry</label>
-                    <input value="<?= $games[0]->getGameName() ?>" type="text" class="form-control" name="game_name" id="game_name">
-                </div>
-                <div class="mb-3">
-                    <label for="text" class="form-label">Žáner</label>
-                    <input value="<?= $games[0]->getGenre() ?>" type="text" class="form-control" name="genre" id="genre">
-                </div>
-                <div class="mb-3">
-                    <label for="number" class="form-label">Minimalny vek</label>
-                    <input value="<?= $games[0]->getMinAge() ?>" type="number" class="form-control" name="minimal_age" id="minimal_age">
-                </div>
-                <div class="mb-3">
-                    <label for="text" class="form-label">Text</label>
-                    <input value="<?= $games[0]->getText() ?>" type="text" class="form-control" name="text" id="text">
-                </div>
-                <div class="mb-3">
-                    <label for="text" class="form-label">Dátum vydania</label>
-                    <input value="<?= $games[0]->getReleaseDate() ?>" type="text" class="form-control" name="release_date" id="release_date">
-                </div>
-                <button type="submit" class="btn btn-primary">Edituj</button>
+    <div class="center">
+        <div class="container">
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th>Game Id</th>
+                    <th>Názov</th>
+                    <th>Žáner</th>
+                    <th>Min vek</th>
+                    <th>Text</th>
+                    <th>Dátum vydania</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <?php
+                foreach ($games as $game):
+                    ?>
+                    <tbody>
+                    <tr>
+                        <td> <?= $game->getGameId()  ?></td>
+                        <td> <?= $game->getGameName()  ?></td>
+                        <td> <?= $game->getGenre() ?></td>
+                        <td> <?= $game->getMinAge()  ?> </td>
+                        <td> <?= $game->getText()  ?> </td>
+                        <td> <?= $game->getReleaseDate()  ?> </td>
+                        <td> <a class="btn btn-warning" href="/views/edit-game.php?id_game=<?=$game->getGameId()?>">Update</a> </td>
+                        <td> <a class="btn btn-danger" href="/servlets/delete-game.php?id_game=<?=$game->getGameId() ?>">Delete</a> </td>
+                    </tr>
+                    </tbody>
+                <?php
+                endforeach;
+                ?>
+            </table>
         </div>
-    </div>
+        <a class="btn btn-primary" href="/views/add-game.php">Pridaj</a>
     </div>
 </section>
 
@@ -115,7 +120,7 @@ try{
                 <li><a href="registracia.html"><p>Registrácia</p></a></li>
                 <li><a href="not_found.html"><p>Prihlasenie</p></a></li>
                 <li><a href="not_found.html"><p>Obchodné podmienky</p></a></li>
-                <li><a href="database_games.php"><p>Databaza</p></a></li>
+                <li><a href="database-games.php"><p>Databaza</p></a></li>
             </ul>
         </div>
         <div class="col-sm-4">
@@ -123,26 +128,5 @@ try{
         </div>
     </div>
 </section>
-<script>
-    $( "#update_form" ).validate({
-        rules: {
-            game_name: {
-                required: true,
-            },
-            genre: {
-                required: true,
-            },
-            minimal_age: {
-                required: true,
-            },
-            text: {
-                required: true,
-            },
-            release_date: {
-                required: true,
-            }
-        }
-    });
-</script>
 </body>
 </html>

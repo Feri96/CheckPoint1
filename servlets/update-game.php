@@ -10,7 +10,7 @@ if(isset($_REQUEST["game_name"]) && isset($_REQUEST["genre"]) && isset($_REQUEST
     var_dump($game);
     try {
         $gameController->editGame($game);
-        header("Location: /views/database_games.php");
+        header("Location: /views/database-games.php");
         exit;
     } catch (Exception $e) {
         echo $e->getMessage();
