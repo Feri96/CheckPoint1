@@ -2,22 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registrácia</title>
+    <title>Databaza</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../style.css">
+    <?php
+    require_once "..\header.php";
+    require_once $_SERVER["DOCUMENT_ROOT"]."/controllers/GameController.php";
+    ?>
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+<?php
+$games = [];
+$gameController = new GameController();
+try{
+    $games = $gameController->selectAllGames(50);
+}catch(Exception $e) {
+    echo $e->getMessage();
+}
+?>
+
 <section class="header">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-                <img src="/img/1.png" alt="Logo" width="60" height="50">Game Oasis
+            <a class="navbar-brand" href="index.html">Game Oasis
+                <img src="/img/1.png" alt="Logo" width="60" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,45 +69,43 @@
     </nav>
 </section>
 <section class="main_body">
-    <div class="container text-center">
-        <div class="row align-items-start">
-            <div class="col">
-                <background-image src="/img/back.jpg"></background-image>
-            </div>
-            <div class="col">
-                <form>
-                    <h2>Registrácia</h2>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Heslo</label>
-                        <input type="password" class="form-control" id="password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="first-name" class="form-label">Meno</label>
-                        <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="last-name" class="form-label">Priezvisko</label>
-                        <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="check">
-                        <label class="form-check-label" for="check">Súhlasím s podmienkami.</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Registrácia</button>
-                </form>
-            </div>
-            <div class="col">
-                <div class="col3">
-
-                </div>
-            </div>
+    <div class="center">
+        <div class="container">
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th>Game Id</th>
+                    <th>Názov</th>
+                    <th>Žáner</th>
+                    <th>Min vek</th>
+                    <th>Text</th>
+                    <th>Dátum vydania</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <?php
+                foreach ($games as $game):
+                    ?>
+                    <tbody>
+                    <tr>
+                        <td> <?= $game->getGameId()  ?></td>
+                        <td> <?= $game->getGameName()  ?></td>
+                        <td> <?= $game->getGenre() ?></td>
+                        <td> <?= $game->getMinAge()  ?> </td>
+                        <td> <?= $game->getText()  ?> </td>
+                        <td> <?= $game->getReleaseDate()  ?> </td>
+                        <td> <a class="btn btn-warning" href="/views/edit_game.php?id_game=<?=$game->getGameId()?>">Update</a> </td>
+                        <td> <a class="btn btn-danger" href="/servlets/delete-game.php?id_game=<?=$game->getGameId() ?>">Delete</a> </td>
+                    </tr>
+                    </tbody>
+                <?php
+                endforeach;
+                ?>
+            </table>
         </div>
+        <a class="btn btn-primary" href="add_game.php">Pridaj</a>
     </div>
-
 </section>
 
 <section class="footer">

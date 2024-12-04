@@ -2,9 +2,9 @@
 require_once $_SERVER["DOCUMENT_ROOT"]."/models/Game.php";
 require_once $_SERVER["DOCUMENT_ROOT"]."/helpers/Settings.php";
 
-class ClientController
+class GameController
 {
-    public function addClient(Game $game): bool{
+    public function addGame(Game $game): bool{
         try {
             $pdo = Settings::getConnection();
 

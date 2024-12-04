@@ -1,13 +1,13 @@
 <?php
 
-require_once "../controllers/ClientController.php";
+require_once "../controllers/GameController.php";
 
-$client_id = $_REQUEST["client_id"];
-$clientController = new ClientController();
-if (isset($client_id)) {
+$id_game = $_REQUEST["id_game"];
+$gameController = new GameController();
+if (isset($id_game)) {
     try {
-        $clientController->deleteClient((int)$client_id);
-        header("Location: /views/table-client.php");
+        $gameController->deleteGame((int)$id_game);
+        header("Location: /views/database_games.php");
     } catch (Exception $exception) {
         echo $exception->getMessage();
     }

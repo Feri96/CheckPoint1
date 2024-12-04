@@ -67,7 +67,7 @@ class Game
     }
 
     /**
-     * @return string
+     * @return int
      */
     public function getMinAge(): int
     {
@@ -77,21 +77,19 @@ class Game
     /**
      * @return string
      */
-    public function getReleaseDate(): string
-    {
-        return $this->release_date;
-    }
 
-    /**
-     * @return string
-     */
     public function getText(): string
     {
         return $this->text;
     }
     /**
-     * @var string
+     * @return string
      */
+    public function getReleaseDate(): string
+    {
+        return $this->release_date;
+    }
+
 
     /**
      * @param int $id_game

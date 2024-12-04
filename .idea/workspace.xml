@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dd10d4f-3497-4862-a743-0a238b878235" name="Changes" comment="se" />
+    <list default="true" id="5dd10d4f-3497-4862-a743-0a238b878235" name="Changes" comment="se">
+      <change afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/add_game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/database_games.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/edit_game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/GameController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlets/delete-game.php" beforeDir="false" afterPath="$PROJECT_DIR$/servlets/delete-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlets/insert-game.php" beforeDir="false" afterPath="$PROJECT_DIR$/servlets/insert-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlets/update-game.php" beforeDir="false" afterPath="$PROJECT_DIR$/servlets/update-game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/not_found.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/not_found.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/registracia.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/registracia.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/zoznam_hier.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/zoznam_hier.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +42,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="2nQuhzN46QEoHRVynWH1UfWQv9H" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -72,7 +89,7 @@
       <updated>1728917751668</updated>
       <workItem from="1728917753139" duration="420000" />
       <workItem from="1729681797595" duration="1572000" />
-      <workItem from="1733304948946" duration="4482000" />
+      <workItem from="1733304948946" duration="11749000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1728917888221</created>
@@ -137,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733325268118</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="se">
+      <created>1733325337751</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733325337751</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
